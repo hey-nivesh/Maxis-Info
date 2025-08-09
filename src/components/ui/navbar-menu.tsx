@@ -2,7 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const transition = {
+import type { Transition as FMTransition } from "framer-motion";
+
+const transition: FMTransition = {
   type: "spring",
   mass: 0.5,
   damping: 11.5,
@@ -104,7 +106,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return (
     <a
       {...rest}

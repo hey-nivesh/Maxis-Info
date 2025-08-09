@@ -8,11 +8,12 @@ interface chooseus {
     id: number;
     title: string;
     description: string;
-   
+    slug: string;
+    isFeatured: boolean;
 }
 
 function AboutPage() {
-   const chooseus = Chooseusdata.chooseus.filter((course => course.isFeatured))
+   const chooseus = Chooseusdata.chooseus.filter((course: chooseus) => course.isFeatured);
     return (
         <div className="py-12 bg-gray-900">
          <div>

@@ -1,4 +1,3 @@
-import { BackgroundGradient } from "@/components/ui/background-gradient";
 import Whychoose from "@/components/whychoose";
 import React from "react";
 
@@ -30,7 +29,7 @@ const AboutPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Let's discuss how we can help you achieve your goals with innovative
+            Let&apos;s discuss how we can help you achieve your goals with innovative
             technology solutions.
           </p>
           <a

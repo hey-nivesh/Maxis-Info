@@ -1,19 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { WorldMap } from "@/components/ui/world-map";
+import { motion } from "framer-motion";
+import { Typewriter } from "@/components/animations/Typewriter";
 
 export default function SolutionsPage() {
   return (
     <div className="flex flex-col">
       <div className="min-h-screen flex items-center justify-center bg-black px-4 py-16">
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 flex flex-col items-start justify-center text-left">
+          <motion.div
+            className="flex-1 flex flex-col items-start justify-center text-left"
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20, mass: 0.6 }}
+          >
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Let The Work Begin!<br />with MIPL
+              <Typewriter text={"Let The Work Begin!\nwith MIPL"} speedMs={24} />
             </h1>
             <p className="text-lg md:text-xl text-neutral-200 mb-10 max-w-lg">
-              Whatever the challenge, MIPL is up to it<br />
-              We’re happy to discuss your Portfolio and answer any question:
+              <Typewriter
+                text={"Whatever the challenge, MIPL is up to it\nWe’re happy to discuss your Portfolio and answer any question:"}
+                speedMs={18}
+                delayMs={700}
+              />
             </p>
             <div className="flex flex-col gap-6">
               <HoverBorderGradient containerClassName="w-fit" className="flex items-center gap-4 text-lg font-medium">
@@ -22,7 +34,7 @@ export default function SolutionsPage() {
                     <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                For Guest
+                <Typewriter text={"For Guest"} delayMs={1400} speedMs={20} />
               </HoverBorderGradient>
               <HoverBorderGradient containerClassName="w-fit" className="flex items-center gap-4 text-lg font-medium">
                 <span className="inline-flex items-center justify-center w-12 h-12 rounded-full border text-black border-white bg-white">
@@ -30,11 +42,17 @@ export default function SolutionsPage() {
                     <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                For Existing Customer
+                <Typewriter text={"For Existing Customer"} delayMs={1800} speedMs={20} />
               </HoverBorderGradient>
             </div>
-          </div>
-          <div className="flex-1 flex items-center justify-center">
+          </motion.div>
+
+          <motion.div
+            className="flex-1 flex items-center justify-center"
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20, mass: 0.6, delay: 0.1 }}
+          >
             <Image
               src="/solutions_img.png"
               alt="Solutions"
@@ -43,7 +61,7 @@ export default function SolutionsPage() {
               className="shadow-2xl object-contain bg-white/5"
               priority
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex justify-center items-center py-16 bg-black">
