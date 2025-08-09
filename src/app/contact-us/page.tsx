@@ -2,7 +2,7 @@ import Image from "next/image";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { WorldMap } from "@/components/ui/world-map";
 
-export default function SolutionsPage() {
+export default function ContactUsPage() {
   return (
     <div className="flex flex-col">
       <div className="min-h-screen flex items-center justify-center bg-black px-4 py-16">
