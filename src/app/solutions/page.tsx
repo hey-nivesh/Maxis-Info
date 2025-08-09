@@ -85,10 +85,8 @@ export default function SolutionsPage() {
           </div>
         </form>
       </div>
-      {/* Dual Card Section: What MIPL's Known For & Looking for a Real Career? */}
       <div className="w-full bg-black py-24 flex justify-center items-center">
         <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-0  overflow-hidden shadow-2xl border border-white">
-          {/* Left Card */}
           <div className="bg-black flex flex-col justify-between p-10 min-h-[500px] relative">
           <h1 className="text-white md:text-4xl text-center mb-6">Our Services</h1>
             <div className="flex flex-col items-center justify-center h-full">
@@ -104,7 +102,6 @@ export default function SolutionsPage() {
               </button>
             </div>
           </div>
-          {/* Right Card */}
           <div className="bg-white flex flex-col justify-between p-10 min-h-[500px] relative">
           <h1 className="text-black md:text-4xl text-center mb-6">Build a Career</h1>
             <div className="flex flex-col h-full justify-between">
